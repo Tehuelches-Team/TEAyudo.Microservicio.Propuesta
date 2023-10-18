@@ -12,9 +12,7 @@
 
   <ItemGroup>
     <Folder Include="Exeptions\" />
-    <Folder Include="Interface\" />
     <Folder Include="Validation\" />
-    <Folder Include="UseCase\" />
   </ItemGroup>
 
 </Project>

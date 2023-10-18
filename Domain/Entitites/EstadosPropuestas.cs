@@ -14,7 +14,6 @@ namespace Domain.Entitites
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int EstadoPropuestaId { get; set; }
         public string Descripcion { get; set; }
-
         public  Propuesta Propuesta { get; set; }
     }
 }
