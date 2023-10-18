@@ -18,5 +18,7 @@ namespace Domain.Entitites
         public int EstadoPropuestaId { get; set; }
         public string InfoAdicional { get; set; }
         public int Monto { get; set; }
+
+        public  EstadosPropuestas EstadosPropuestas { get; set; }
     }
 }
