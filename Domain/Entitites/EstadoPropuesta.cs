@@ -8,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace Domain.Entitites
 {
-    public class EstadosPropuestas
+    public class EstadoPropuesta
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int EstadoPropuestaId { get; set; }
+        [StringLength(100)]
         public string Descripcion { get; set; }
         public  Propuesta Propuesta { get; set; }
     }

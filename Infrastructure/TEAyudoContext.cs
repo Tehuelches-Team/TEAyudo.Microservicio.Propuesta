@@ -11,7 +11,7 @@ namespace Infrastructure
 {
     public class TEAyudoContext : DbContext
     {
-        public DbSet<EstadosPropuestas> EstadosPropuestas { get; set; }
+        public DbSet<EstadoPropuesta> EstadoPropuesta { get; set; }
         public DbSet<Propuesta> Propuesta { get; set; }
 
         public TEAyudoContext(DbContextOptions<TEAyudoContext> options) : base(options)
@@ -22,7 +22,7 @@ namespace Infrastructure
             modelBuilder.Entity<Propuesta>()
                 .HasOne(p => p.EstadosPropuestas)
                 .WithOne(ep => ep.Propuesta)
-                .HasForeignKey<EstadosPropuestas>(ep => ep.EstadoPropuestaId);
+                .HasForeignKey<EstadoPropuesta>(ep => ep.EstadoPropuestaId);
           
 
         }

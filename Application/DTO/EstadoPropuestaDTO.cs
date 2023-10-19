@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infrastructure.Command
+namespace Application.DTO
 {
-    internal class EstadoPrepuestaCommand
+    public class EstadoPropuestaDTO
     {
     }
 }
