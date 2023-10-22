@@ -8,5 +8,8 @@ namespace Application.DTO
 {
     public class EstadoPropuestaDTO
     {
+        public int EstadoPropuestaId { get; set; }
+
+        public string Descripcion { get; set; }
     }
 }

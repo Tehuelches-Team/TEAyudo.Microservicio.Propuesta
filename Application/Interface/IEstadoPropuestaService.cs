@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Application.DTO;
+using Domain.Entitites;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +10,14 @@ namespace Application.Interface
 {
     public interface IEstadoPropuestaService
     {
-        string Name { get; }
+        Task<EstadoPropuesta> CreateEstadoPropuesta(EstadoPropuestaDTO estadoPropuestaDTO);
+
+        Task<EstadoPropuesta> DeleteEstadoPropuesta();
+
+        Task<List<EstadoPropuesta>> GetAll();
+
+        Task<EstadoPropuesta> GetEstadopropuestaById(int EstadoPropuestaId);
+
+
     }
 }

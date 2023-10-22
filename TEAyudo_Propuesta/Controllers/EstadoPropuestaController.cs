@@ -5,8 +5,7 @@ namespace TEAyudo_Propuesta.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PropuestaController : ControllerBase
+    public class EstadoPropuestaController : ControllerBase
     {
-
     }
 }

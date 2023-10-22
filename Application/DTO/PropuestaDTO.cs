@@ -8,5 +8,6 @@ namespace Application.DTO
 {
     public class PropuestaDTO
     {
+
     }
 }

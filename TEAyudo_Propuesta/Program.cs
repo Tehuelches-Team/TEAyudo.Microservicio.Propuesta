@@ -1,6 +1,8 @@
 using Application.Interface;
 using Application.UseCase;
 using Infrastructure;
+using Infrastructure.Command;
+using Infrastructure.Querys;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -21,7 +23,9 @@ builder.Services.AddDbContext<TEAyudoContext>(options => options.UseSqlServer(co
 // inyecciones de dependencias
 
 builder.Services.AddScoped<IPropuestaService, PropuestaService>();
-
+builder.Services.AddScoped<IEstadoPropuestaCommand, EstadoPropuestaCommand>();
+builder.Services.AddScoped<IEstadoPropuestaQuery, EstadoPropuestaQuery>();
+builder.Services.AddScoped<IEstadoPropuestaService, EstadoPropuestaService>();
 
 var app = builder.Build();
 

@@ -24,7 +24,6 @@ namespace Infrastructure
                 .WithOne(ep => ep.Propuesta)
                 .HasForeignKey<EstadoPropuesta>(ep => ep.EstadoPropuestaId);
           
-
         }
 
 
