@@ -24,9 +24,14 @@ namespace Infrastructure.Command
             await _context.SaveChangesAsync();
         }
 
-        public Task RemoveEstadoPropuesta(int EstadoPropuestaID)
+        public async Task RemoveEstadoPropuesta(int EstadoPropuestaID)
         {
-            throw new NotImplementedException();
+            var estadoPropuesta = await _context.EstadoPropuesta.FindAsync(EstadoPropuestaID);
+            if (estadoPropuesta != null)
+            {
+                _context.EstadoPropuesta.Remove(estadoPropuesta);
+                await _context.SaveChangesAsync();
+            }
         }
     }
 

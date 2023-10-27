@@ -1,5 +1,6 @@
 ﻿using Application.Interface;
 using Domain.Entitites;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,24 +11,45 @@ namespace Infrastructure.Command
 {
     public class PropuestaCommand : IPropuestaCommand
     {
-        public Task DeletePropuesta(int PropuestaID)
+        private readonly TEAyudoContext _context;
+
+        public PropuestaCommand(TEAyudoContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
 
         public Task InsertPropuesta(Propuesta Propuesta)
         {
-            throw new NotImplementedException();
+           _context.Add(Propuesta);
+            return _context.SaveChangesAsync();
         }
 
-        public Task RemovePropuesta(int PropuestaID)
+        public async Task RemovePropuesta(int PropuestaID)
         {
-            throw new NotImplementedException();
-        }
+            var propuesta = _context.Propuesta.Find(PropuestaID);
+            if (propuesta != null)
+            {
+                _context.Propuesta.Remove(propuesta);
+                await _context.SaveChangesAsync();
+            }
+        }    
 
-        public Task UpdatePropuesta(Propuesta Propuesta)
+        public async Task UpdatePropuesta(Propuesta Propuesta)
         {
-            throw new NotImplementedException();
+            Propuesta propuesta = _context.Propuesta.Include(Propuesta => Propuesta.EstadoPropuestaId)
+                .Include(Propuesta => Propuesta.TutorId)
+                .Include(Propuesta => Propuesta.AcompananteId)
+                .FirstOrDefault(Propuesta => Propuesta.PropuestaId == Propuesta.PropuestaId);       
+
+            propuesta.EstadoPropuestaId = Propuesta.EstadoPropuestaId;
+            propuesta.TutorId = Propuesta.TutorId;
+            propuesta.AcompananteId = Propuesta.AcompananteId;
+            propuesta.InfoAdicional = Propuesta.InfoAdicional;
+            propuesta.Monto = Propuesta.Monto;
+
+             _context.SaveChanges();
+
+            
         }
     }
 }

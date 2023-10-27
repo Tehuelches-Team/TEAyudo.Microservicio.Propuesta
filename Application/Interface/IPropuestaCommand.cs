@@ -11,12 +11,9 @@ namespace Application.Interface
     {
         Task InsertPropuesta(Propuesta Propuesta);
         Task RemovePropuesta(int PropuestaID);
-
         Task UpdatePropuesta(Propuesta Propuesta);
 
-        Task DeletePropuesta(int PropuestaID);
-
-
+      
 
     }
 }

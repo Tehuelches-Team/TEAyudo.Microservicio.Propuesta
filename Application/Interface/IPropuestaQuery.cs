@@ -11,7 +11,7 @@ namespace Application.Interface
     {
         Task<Propuesta> GetPropuesta(int PropuestaID);
 
-        Task<List<Propuesta>> GetPropuestas();
+        Task<List<Propuesta>> GetAllPropuestas();
 
         Task<List<Propuesta>> GetPropuestasByEstado(int EstadoPropuestaID);
     }

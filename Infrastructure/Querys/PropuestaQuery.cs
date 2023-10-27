@@ -10,19 +10,26 @@ namespace Infrastructure.Querys
 {
     public class PropuestaQuery : IPropuestaQuery
     {
-        public Task<Propuesta> GetPropuesta(int PropuestaID)
+        private readonly TEAyudoContext _context;
+
+        public PropuestaQuery(TEAyudoContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
 
-        public Task<List<Propuesta>> GetPropuestas()
+        public Task<Propuesta> GetPropuesta(int PropuestaID)
         {
-            throw new NotImplementedException();
+            return _context.Propuesta.FindAsync(PropuestaID);
+        }
+
+        public Task<List<Propuesta>> GetAllPropuestas()
+        {
+          return  _context.Propuestas.ToListAsync();
         }
 
         public Task<List<Propuesta>> GetPropuestasByEstado(int EstadoPropuestaID)
         {
-            throw new NotImplementedException();
+            return _context.Propuestas.Where(x => x.EstadoPropuestaId == EstadoPropuestaID).ToListAsync();  
         }
     }
 }
