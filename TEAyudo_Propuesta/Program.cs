@@ -23,9 +23,8 @@ builder.Services.AddDbContext<TEAyudoContext>(options => options.UseSqlServer(co
 // inyecciones de dependencias
 
 builder.Services.AddScoped<IPropuestaService, PropuestaService>();
-builder.Services.AddScoped<IEstadoPropuestaCommand, EstadoPropuestaCommand>();
-builder.Services.AddScoped<IEstadoPropuestaQuery, EstadoPropuestaQuery>();
-builder.Services.AddScoped<IEstadoPropuestaService, EstadoPropuestaService>();
+builder.Services.AddScoped<IPropuestaCommand, PropuestaCommand>();
+builder.Services.AddScoped<IPropuestaQuery, PropuestaQuery>();
 
 var app = builder.Build();
 

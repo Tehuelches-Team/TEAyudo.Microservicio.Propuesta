@@ -11,7 +11,6 @@ namespace Infrastructure
 {
     public class TEAyudoContext : DbContext
     {
-        public DbSet<EstadoPropuesta> EstadoPropuesta { get; set; }
         public DbSet<Propuesta> Propuesta { get; set; }
 
         public TEAyudoContext(DbContextOptions<TEAyudoContext> options) : base(options)
@@ -19,17 +18,13 @@ namespace Infrastructure
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Propuesta>()
-                .HasOne(p => p.EstadosPropuestas)
-                .WithOne(ep => ep.Propuesta)
-                .HasForeignKey<EstadoPropuesta>(ep => ep.EstadoPropuestaId);
-          
+            modelBuilder.Entity<Propuesta>().HasKey(pk => pk.PropuestaId);
         }
 
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server=localhost;Database=TEAyudo_Usuarios;Trusted_Connection=True;TrustServerCertificate=True");
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer("Server=localhost;Database=TEAyudo_Usuarios;Trusted_Connection=True;TrustServerCertificate=True");
+        //}
     }
 }

@@ -11,26 +11,28 @@ namespace Infrastructure.Querys
 {
     public class PropuestaQuery : IPropuestaQuery
     {
-        private readonly TEAyudoContext _context;
+        private readonly TEAyudoContext Context;
 
-        public PropuestaQuery(TEAyudoContext context)
+        public PropuestaQuery(TEAyudoContext Context)
         {
-            _context = context;
+            this.Context = Context;
         }
 
-        public async Task<Propuesta> GetPropuesta(int PropuestaID)
+        public async Task<List<Propuesta>> GetAllPropuestas(int? IdAcompanante, int? IdTutor)
         {
-            return await _context.Propuesta.FindAsync(PropuestaID);
+            return await Context.Propuesta.Where(s => (IdAcompanante != null ? (s.AcompananteId == IdAcompanante) : true) && 
+                                                                                    (IdTutor != null ? (s.TutorId == IdTutor) : true))
+                                                                                    .ToListAsync();
         }
 
-        public async Task<List<Propuesta>> GetAllPropuestas()
+        public async Task<Propuesta?> GetPropuestaById(int PropuestaId)
         {
-          return   _context.Propuesta.ToList();
+            return await Context.Propuesta.FirstOrDefaultAsync(s => s.PropuestaId == PropuestaId);
         }
 
-        public async Task<List<Propuesta>> GetPropuestasByEstado(int EstadoPropuestaID)
-        {
-            return await _context.Propuesta.Where(x => x.EstadoPropuestaId == EstadoPropuestaID).ToListAsync();  
-        }
+        //public async Task<List<Propuesta>> GetPropuestasByEstado(int EstadoPropuestaID)
+        //{
+        //    return await Context.Propuesta.Where(x => x.EstadoPropuestaId == EstadoPropuestaID).ToListAsync();  
+        //}
     }
 }

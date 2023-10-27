@@ -9,10 +9,10 @@ namespace Application.Interface
 {
     public interface IPropuestaQuery
     {
-        Task<Propuesta> GetPropuesta(int PropuestaID);
+        Task<Propuesta?> GetPropuestaById(int PropuestaID);
 
-        Task<List<Propuesta>> GetAllPropuestas();
+        Task<List<Propuesta>> GetAllPropuestas(int? IdAcompanante, int? IdTutor); 
 
-        Task<List<Propuesta>> GetPropuestasByEstado(int EstadoPropuestaID);
+        //Task<List<Propuesta>> GetPropuestasByEstado(int EstadoPropuestaID);
     }
 }

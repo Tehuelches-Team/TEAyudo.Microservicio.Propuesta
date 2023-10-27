@@ -1,4 +1,5 @@
 ﻿using Application.Interface;
+using Application.Model.DTO;
 using Domain.Entitites;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -11,45 +12,45 @@ namespace Infrastructure.Command
 {
     public class PropuestaCommand : IPropuestaCommand
     {
-        private readonly TEAyudoContext _context;
+        private readonly TEAyudoContext Context;
 
-        public PropuestaCommand(TEAyudoContext context)
+        public PropuestaCommand(TEAyudoContext Context)
         {
-            _context = context;
+            this.Context = Context;
         }
 
-        public Task InsertPropuesta(Propuesta Propuesta)
+        public async Task<Propuesta> AddPropuesta(Propuesta Propuesta)
         {
-           _context.Add(Propuesta);
-            return _context.SaveChangesAsync();
+            Context.Add(Propuesta);
+            await Context.SaveChangesAsync();
+            return Propuesta; //Verificar que retorne el id de propuesta.
         }
 
-        public async Task RemovePropuesta(int PropuestaID)
+        public async Task<Propuesta?> UpdatePropuesta(int Id, PropuestaDTO PropuestaDTO) 
         {
-            var propuesta = _context.Propuesta.Find(PropuestaID);
+            Propuesta? Propuesta = await Context.Propuesta.FirstOrDefaultAsync(s => s.PropuestaId == Id);
+            if (Propuesta == null)
+            {
+                return null;
+            }
+            Propuesta.EstadoPropuesta = PropuestaDTO.EstadoPropuesta;
+            Propuesta.Descripcion = PropuestaDTO.Descripcion;
+            Propuesta.InfoAdicional = PropuestaDTO.InfoAdicional;
+            Propuesta.Monto = PropuestaDTO.Monto;
+            await Context.SaveChangesAsync();
+            return Propuesta; //Acá si se cambian las cosas
+        }
+
+        public async Task<Propuesta?> RemovePropuesta(int PropuestaID)
+        {
+            Propuesta? propuesta = await Context.Propuesta.FindAsync(PropuestaID);
             if (propuesta != null)
             {
-                _context.Propuesta.Remove(propuesta);
-                await _context.SaveChangesAsync();
+                Context.Propuesta.Remove(propuesta);
+                await Context.SaveChangesAsync();
             }
+
+            return propuesta;
         }    
-
-        public async Task UpdatePropuesta(Propuesta Propuesta)
-        {
-            Propuesta propuesta = _context.Propuesta.Include(Propuesta => Propuesta.EstadoPropuestaId)
-                .Include(Propuesta => Propuesta.TutorId)
-                .Include(Propuesta => Propuesta.AcompananteId)
-                .FirstOrDefault(Propuesta => Propuesta.PropuestaId == Propuesta.PropuestaId);       
-
-            propuesta.EstadoPropuestaId = Propuesta.EstadoPropuestaId;
-            propuesta.TutorId = Propuesta.TutorId;
-            propuesta.AcompananteId = Propuesta.AcompananteId;
-            propuesta.InfoAdicional = Propuesta.InfoAdicional;
-            propuesta.Monto = Propuesta.Monto;
-
-             _context.SaveChanges();
-
-            
-        }
     }
 }

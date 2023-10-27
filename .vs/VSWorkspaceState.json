@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\TEAyudo_Propuesta",
+    "\\TEAyudo_Propuesta\\Controllers"
   ],
+  "SelectedNode": "\\TEAyudo_Propuesta\\Controllers\\PropuestaController.cs",
   "PreviewInSolutionExplorer": false
 }

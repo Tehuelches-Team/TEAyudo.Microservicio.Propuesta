@@ -9,3 +9,14 @@ C:\Users\aacar\source\repos\TEAyudo.Microservicio.Propuesta\Domain\obj\Debug\net
 C:\Users\aacar\source\repos\TEAyudo.Microservicio.Propuesta\Domain\obj\Debug\net7.0\refint\Domain.dll
 C:\Users\aacar\source\repos\TEAyudo.Microservicio.Propuesta\Domain\obj\Debug\net7.0\Domain.pdb
 C:\Users\aacar\source\repos\TEAyudo.Microservicio.Propuesta\Domain\obj\Debug\net7.0\ref\Domain.dll
+C:\Users\franc\Source\Repos\Tehuelches-Team\TEAyudo.Microservicio.Propuesta\Domain\bin\Debug\net7.0\Domain.deps.json
+C:\Users\franc\Source\Repos\Tehuelches-Team\TEAyudo.Microservicio.Propuesta\Domain\bin\Debug\net7.0\Domain.dll
+C:\Users\franc\Source\Repos\Tehuelches-Team\TEAyudo.Microservicio.Propuesta\Domain\bin\Debug\net7.0\Domain.pdb
+C:\Users\franc\Source\Repos\Tehuelches-Team\TEAyudo.Microservicio.Propuesta\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\franc\Source\Repos\Tehuelches-Team\TEAyudo.Microservicio.Propuesta\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+C:\Users\franc\Source\Repos\Tehuelches-Team\TEAyudo.Microservicio.Propuesta\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+C:\Users\franc\Source\Repos\Tehuelches-Team\TEAyudo.Microservicio.Propuesta\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\franc\Source\Repos\Tehuelches-Team\TEAyudo.Microservicio.Propuesta\Domain\obj\Debug\net7.0\Domain.dll
+C:\Users\franc\Source\Repos\Tehuelches-Team\TEAyudo.Microservicio.Propuesta\Domain\obj\Debug\net7.0\refint\Domain.dll
+C:\Users\franc\Source\Repos\Tehuelches-Team\TEAyudo.Microservicio.Propuesta\Domain\obj\Debug\net7.0\Domain.pdb
+C:\Users\franc\Source\Repos\Tehuelches-Team\TEAyudo.Microservicio.Propuesta\Domain\obj\Debug\net7.0\ref\Domain.dll
