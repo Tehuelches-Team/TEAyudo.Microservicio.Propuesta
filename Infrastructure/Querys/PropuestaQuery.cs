@@ -1,5 +1,6 @@
 ﻿using Application.Interface;
 using Domain.Entitites;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,19 +18,19 @@ namespace Infrastructure.Querys
             _context = context;
         }
 
-        public Task<Propuesta> GetPropuesta(int PropuestaID)
+        public async Task<Propuesta> GetPropuesta(int PropuestaID)
         {
-            return _context.Propuesta.FindAsync(PropuestaID);
+            return await _context.Propuesta.FindAsync(PropuestaID);
         }
 
-        public Task<List<Propuesta>> GetAllPropuestas()
+        public async Task<List<Propuesta>> GetAllPropuestas()
         {
-          return  _context.Propuestas.ToListAsync();
+          return   _context.Propuesta.ToList();
         }
 
-        public Task<List<Propuesta>> GetPropuestasByEstado(int EstadoPropuestaID)
+        public async Task<List<Propuesta>> GetPropuestasByEstado(int EstadoPropuestaID)
         {
-            return _context.Propuestas.Where(x => x.EstadoPropuestaId == EstadoPropuestaID).ToListAsync();  
+            return await _context.Propuesta.Where(x => x.EstadoPropuestaId == EstadoPropuestaID).ToListAsync();  
         }
     }
 }
