@@ -1,4 +1,6 @@
-﻿using Application.Interface;
+﻿using Application.Interface.acompanantes;
+using Application.Interface.Propuestas;
+using Application.Interface.Tutores;
 using Application.Mappings;
 using Application.Model.DTO;
 using Application.Model.Response;
@@ -15,11 +17,39 @@ namespace Application.UseCase
     {
         private readonly IPropuestaQuery PropuestaQuery;
         private readonly IPropuestaCommand PropuestaCommand;
+        private readonly IAcompananteQuery AcompananteQuery;
+        private readonly ITutorQuery TutorQuery;
 
-        public PropuestaService(IPropuestaQuery PropuestaQuery, IPropuestaCommand propuestaCommand)
+        public PropuestaService(IPropuestaQuery PropuestaQuery, IPropuestaCommand PropuestaCommand, IAcompananteQuery AcompananteQuery, ITutorQuery TutorQuery)
         {
             this.PropuestaQuery = PropuestaQuery;
-            PropuestaCommand = propuestaCommand;
+            this.PropuestaCommand = PropuestaCommand;
+            this.AcompananteQuery = AcompananteQuery;
+            this.TutorQuery = TutorQuery;
+        }
+
+        public async Task<List<PropuestaTutorResponse>> GetAllPropuestaForTutor(int? IdTutor)
+        {
+            List<Propuesta> Lista = await PropuestaQuery.GetAllPropuestas(null, IdTutor);
+            MappingToPropuestaTutor Mapping = new MappingToPropuestaTutor();
+            List<PropuestaTutorResponse> ListaResponse = new List<PropuestaTutorResponse>();
+            foreach (var Propuesta in Lista)
+            {
+                ListaResponse.Add(Mapping.Map(Propuesta, await AcompananteQuery.GetAcompananteById(Propuesta.AcompananteId)));
+            }
+            return ListaResponse;
+        }
+
+        public async Task<List<PropuestaAcompananteResponse>> GetAllPropuestaForAcompanante(int? IdAcompanante)
+        {
+            List<Propuesta> Lista = await PropuestaQuery.GetAllPropuestas(IdAcompanante, null);
+            MappingToPropuestaAcompanante Mapping = new MappingToPropuestaAcompanante();
+            List<PropuestaAcompananteResponse> ListaResponse = new List<PropuestaAcompananteResponse>();
+            foreach (var Propuesta in Lista)
+            {
+                ListaResponse.Add(Mapping.Map(Propuesta, await TutorQuery.GetTutorById(Propuesta.TutorId)));
+            }
+            return ListaResponse;
         }
 
         public async Task<List<PropuestaResponse>> GetAllPropuestaUsuario(int? IdAcompanante, int? IdTutor)
@@ -50,16 +80,9 @@ namespace Application.UseCase
             return Mapping2.Map(Propuesta);
         }
 
-        public async Task<PropuestaResponse?> UpdatePropuesta(int Id, PropuestaDTO PropuestaDTO) 
+        public async Task<PropuestaResponse> UpdatePropuesta(int Id, int Estado) 
         {
-            MappingPropuestaDTOToPropuesta Mapping = new MappingPropuestaDTOToPropuesta();
-            Propuesta? Propuesta = Mapping.Map(PropuestaDTO);
-            Propuesta.PropuestaId = Id;
-            Propuesta = await PropuestaCommand.UpdatePropuesta(Id,PropuestaDTO);
-            if (Propuesta == null)
-            {
-                return null;
-            }
+            Propuesta Propuesta = await PropuestaCommand.UpdatePropuesta(Id,Estado);
             MappingPropuestaToPropuestaResponse Mapping2 = new MappingPropuestaToPropuestaResponse();
             return Mapping2.Map(Propuesta); 
         }

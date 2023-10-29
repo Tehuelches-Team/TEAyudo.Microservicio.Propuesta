@@ -1,7 +1,9 @@
-using Application.Interface;
+using Application.Interface.acompanantes;
+using Application.Interface.Propuestas;
+using Application.Interface.Tutores;
 using Application.UseCase;
-using Infrastructure;
 using Infrastructure.Command;
+using Infrastructure.Persistence;
 using Infrastructure.Querys;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -25,6 +27,8 @@ builder.Services.AddDbContext<TEAyudoContext>(options => options.UseSqlServer(co
 builder.Services.AddScoped<IPropuestaService, PropuestaService>();
 builder.Services.AddScoped<IPropuestaCommand, PropuestaCommand>();
 builder.Services.AddScoped<IPropuestaQuery, PropuestaQuery>();
+builder.Services.AddScoped<IAcompananteQuery, AcompananteQuery>();
+builder.Services.AddScoped<ITutorQuery, TutorQuery>();
 
 var app = builder.Build();
 

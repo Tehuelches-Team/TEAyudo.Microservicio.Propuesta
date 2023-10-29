@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Interface
+namespace Application.Interface.Propuestas
 {
     public interface IPropuestaCommand
     {
         Task<Propuesta> AddPropuesta(Propuesta Propuesta);
         Task<Propuesta> RemovePropuesta(int PropuestaId);
-        Task<Propuesta?> UpdatePropuesta(int Id, PropuestaDTO PropuestaDTO);
+        Task<Propuesta> UpdatePropuesta(int Id, int Estado);
     }
 }

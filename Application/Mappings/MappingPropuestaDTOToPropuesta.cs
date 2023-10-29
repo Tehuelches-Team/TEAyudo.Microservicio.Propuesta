@@ -15,8 +15,8 @@ namespace Application.Mappings
                 InfoAdicional = PropuestaDTO.InfoAdicional,
                 Monto = PropuestaDTO.Monto,
                 EstadoPropuesta = PropuestaDTO.EstadoPropuesta,
-                Descripcion = PropuestaDTO.Descripcion,
-            };
+                Descripcion = PropuestaDTO.Descripcion
+            }; 
         }
     }
 }

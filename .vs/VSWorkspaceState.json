@@ -1,9 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Application",
+    "\\Application\\Interface",
+    "\\Application\\Mappings",
+    "\\Application\\UseCase",
     "\\TEAyudo_Propuesta",
     "\\TEAyudo_Propuesta\\Controllers"
   ],
-  "SelectedNode": "\\TEAyudo_Propuesta\\Controllers\\PropuestaController.cs",
+  "SelectedNode": "\\Application\\UseCase\\PropuestaService.cs",
   "PreviewInSolutionExplorer": false
 }

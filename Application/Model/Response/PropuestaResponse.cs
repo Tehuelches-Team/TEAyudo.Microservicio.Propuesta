@@ -8,7 +8,7 @@ namespace Application.Model.Response
 {
     public class PropuestaResponse
     {
-        public int PropuestaId {  get; set; }
+        public int PropuestaId { get; set; }
         public int TutorId { get; set; }
         public int AcompananteId { get; set; }
         public string InfoAdicional { get; set; }

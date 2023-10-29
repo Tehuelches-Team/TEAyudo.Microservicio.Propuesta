@@ -1,6 +1,7 @@
-﻿using Application.Interface;
+﻿using Application.Interface.Propuestas;
 using Application.Model.DTO;
 using Domain.Entitites;
+using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -26,17 +27,10 @@ namespace Infrastructure.Command
             return Propuesta; //Verificar que retorne el id de propuesta.
         }
 
-        public async Task<Propuesta?> UpdatePropuesta(int Id, PropuestaDTO PropuestaDTO) 
+        public async Task<Propuesta> UpdatePropuesta(int Id, int Estado) 
         {
             Propuesta? Propuesta = await Context.Propuesta.FirstOrDefaultAsync(s => s.PropuestaId == Id);
-            if (Propuesta == null)
-            {
-                return null;
-            }
-            Propuesta.EstadoPropuesta = PropuestaDTO.EstadoPropuesta;
-            Propuesta.Descripcion = PropuestaDTO.Descripcion;
-            Propuesta.InfoAdicional = PropuestaDTO.InfoAdicional;
-            Propuesta.Monto = PropuestaDTO.Monto;
+            Propuesta.EstadoPropuesta = Estado;
             await Context.SaveChangesAsync();
             return Propuesta; //Acá si se cambian las cosas
         }

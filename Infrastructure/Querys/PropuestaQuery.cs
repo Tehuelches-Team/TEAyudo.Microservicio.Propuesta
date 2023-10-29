@@ -1,5 +1,6 @@
-﻿using Application.Interface;
+﻿using Application.Interface.Propuestas;
 using Domain.Entitites;
+using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

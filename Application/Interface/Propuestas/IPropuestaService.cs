@@ -6,14 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Interface
+namespace Application.Interface.Propuestas
 {
     public interface IPropuestaService
     {
-        Task<List<PropuestaResponse>> GetAllPropuestaUsuario(int? IdAcompanante, int? IdTutor);
+        Task<List<PropuestaTutorResponse>> GetAllPropuestaForTutor(int? IdTutor);
+        Task<List<PropuestaAcompananteResponse>> GetAllPropuestaForAcompanante(int? IdAcompanante);
         Task<PropuestaResponse?> GetPropuestaById(int Id);
         Task<PropuestaResponse> AddPropuesta(PropuestaDTO PropuestaDTO);
-        Task<PropuestaResponse?> UpdatePropuesta(int Id, PropuestaDTO PropuestaDTO);
+        Task<PropuestaResponse> UpdatePropuesta(int Id, int Estado);
         Task<PropuestaResponse> RemovePropuesta(int id);
     }
 }

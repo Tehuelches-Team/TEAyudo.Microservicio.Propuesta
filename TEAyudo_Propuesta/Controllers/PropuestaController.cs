@@ -1,4 +1,4 @@
-﻿using Application.Interface;
+﻿using Application.Interface.Propuestas;
 using Application.Model.DTO;
 using Application.Model.Response;
 using Microsoft.AspNetCore.Http;
@@ -17,26 +17,21 @@ namespace TEAyudo_Propuesta.Controllers
             this.PropuestaService = PropuestaService;
         }
 
-        [HttpGet("{IdAcompanante,IdTutor}")]
-        public async Task<IActionResult> GetAllPropuestaUsuario(int? IdAcompanante, int? IdTutor)
+        [HttpGet("{TutorId}/Tutor")]
+        public async Task<IActionResult> GetPropuestaForTutor(int? TutorId) //Panorama tutor (Podra ver las propuestas con los datos del acompanante correspondiente)
         {
-            return Ok(await PropuestaService.GetAllPropuestaUsuario(IdAcompanante, IdTutor));
+            return Ok(await PropuestaService.GetAllPropuestaForTutor(TutorId));
         }
 
-        [HttpGet("{Id}")]
-        public async Task<IActionResult> GetPropuestaById(int Id)
+        [HttpGet("{AcompananteId}/Acompanante")]
+        public async Task<IActionResult> GetPropuestaForAcompanante(int? AcompananteId) //Panorama Acompanante (Podra ver las propuestas con los datos del tutor correspondiente)
         {
-            PropuestaResponse? Propuesta = await PropuestaService.GetPropuestaById(Id);
-            if (Propuesta == null)
-            {
-                var Mensaje = new
-                {
-                    motivo = "No existe una propuesta asociada a ese id"
-                };
-                return NotFound(Mensaje);
-            }
-            return Ok(Propuesta);
+            return Ok(await PropuestaService.GetAllPropuestaForAcompanante(AcompananteId));
         }
+
+        //[HttpGet("{IdAcom}")]
+        //public async Task<IActionResult> GetPropuestaForAcom(int Id, int? IdTutor)
+
 
         [HttpPost]
         public async Task<IActionResult> PostPropuesta(PropuestaDTO PropuestaDTO)
@@ -45,10 +40,10 @@ namespace TEAyudo_Propuesta.Controllers
             return Ok(Propuesta);
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutPropuesta(int Id, PropuestaDTO PropuestaDTO)
+        [HttpPut("{id}/{Estado}")]
+        public async Task<IActionResult> PutPropuesta(int Id, int Estado)
         {
-            PropuestaResponse? Propuesta = await PropuestaService.UpdatePropuesta(Id,PropuestaDTO);
+            PropuestaResponse? Propuesta = await PropuestaService.UpdatePropuesta(Id,Estado);
             if (Propuesta == null)
             {
                 var Mensaje = new
