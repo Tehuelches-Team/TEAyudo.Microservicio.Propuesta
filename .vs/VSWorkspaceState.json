@@ -5,9 +5,11 @@
     "\\Application\\Interface",
     "\\Application\\Mappings",
     "\\Application\\UseCase",
+    "\\Infrastructure",
+    "\\Infrastructure\\Querys",
     "\\TEAyudo_Propuesta",
     "\\TEAyudo_Propuesta\\Controllers"
   ],
-  "SelectedNode": "\\Application\\UseCase\\PropuestaService.cs",
+  "SelectedNode": "\\Infrastructure\\Querys\\PropuestaQuery.cs",
   "PreviewInSolutionExplorer": false
 }

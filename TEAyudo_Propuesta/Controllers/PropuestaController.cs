@@ -40,7 +40,7 @@ namespace TEAyudo_Propuesta.Controllers
             return Ok(Propuesta);
         }
 
-        [HttpPut("{id}/{Estado}")]
+        [HttpPut("{Id}/{Estado}")]
         public async Task<IActionResult> PutPropuesta(int Id, int Estado)
         {
             PropuestaResponse? Propuesta = await PropuestaService.UpdatePropuesta(Id,Estado);
