@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\TEAyudo_Propuesta.props" />
+</Project>

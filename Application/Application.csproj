@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -7,7 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Mappings\MappingPropuestasToPropuestasResponse" />
+    <None Remove="Mappings\MappingPropuestaToPropuestaResponse" />
+    <None Remove="Mappings\NewFile1.txt" />
+    <None Remove="Model\Response\NewFile1.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Exeptions\" />
+    <Folder Include="Validation\" />
   </ItemGroup>
 
 </Project>
