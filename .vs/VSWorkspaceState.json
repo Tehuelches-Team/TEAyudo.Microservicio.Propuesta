@@ -1,15 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Application",
-    "\\Application\\Interface",
-    "\\Application\\Mappings",
     "\\Application\\UseCase",
-    "\\Infrastructure",
-    "\\Infrastructure\\Querys",
-    "\\TEAyudo_Propuesta",
-    "\\TEAyudo_Propuesta\\Controllers"
+    "\\Infrastructure\\Querys"
   ],
-  "SelectedNode": "\\Infrastructure\\Querys\\PropuestaQuery.cs",
+  "SelectedNode": "\\TEAyudo_Propuesta.sln",
   "PreviewInSolutionExplorer": false
 }
