@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a9AvF0DEaJ0tCS3N9vFPuxu8/3rBTmEeUcyyMb9zNZwtR1ge9Bp9J12ljNzABrRxn32hTPwEYdJsQFAA2pWt2g==",
+  "dgSpecHash": "VcKMKSSXu7MyfuhXOUBl23tWKVkxywnyPvHuwe5SioGYbYNu9RgnvlcNg+Hu4A4QbRq4Ls01Bgqfzn73d9NEyw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\franc\\Source\\Repos\\Tehuelches-Team\\TEAyudo.Microservicio.Propuesta\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

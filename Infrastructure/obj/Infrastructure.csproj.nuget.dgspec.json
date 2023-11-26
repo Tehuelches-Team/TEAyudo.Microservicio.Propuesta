@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\franc\\Source\\Repos\\Tehuelches-Team\\TEAyudo.Microservicio.Propuesta\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\franc\\Source\\Repos\\Tehuelches-Team\\TEAyudo.Microservicio.Propuesta\\Application\\Application.csproj": {
+    "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\franc\\Source\\Repos\\Tehuelches-Team\\TEAyudo.Microservicio.Propuesta\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\franc\\Source\\Repos\\Tehuelches-Team\\TEAyudo.Microservicio.Propuesta\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\franc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\franc\\Source\\Repos\\Tehuelches-Team\\TEAyudo.Microservicio.Propuesta\\Application\\obj\\",
+        "projectPath": "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\matias\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\franc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\matias\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +22,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://packagesource": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\franc\\Source\\Repos\\Tehuelches-Team\\TEAyudo.Microservicio.Propuesta\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\franc\\Source\\Repos\\Tehuelches-Team\\TEAyudo.Microservicio.Propuesta\\Domain\\Domain.csproj"
+              "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Domain\\Domain.csproj"
               }
             }
           }
@@ -59,21 +60,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\franc\\Source\\Repos\\Tehuelches-Team\\TEAyudo.Microservicio.Propuesta\\Domain\\Domain.csproj": {
+    "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\franc\\Source\\Repos\\Tehuelches-Team\\TEAyudo.Microservicio.Propuesta\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\franc\\Source\\Repos\\Tehuelches-Team\\TEAyudo.Microservicio.Propuesta\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\franc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\franc\\Source\\Repos\\Tehuelches-Team\\TEAyudo.Microservicio.Propuesta\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\matias\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\franc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\matias\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -81,7 +82,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://packagesource": {}
         },
         "frameworks": {
           "net7.0": {
@@ -114,21 +116,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\franc\\Source\\Repos\\Tehuelches-Team\\TEAyudo.Microservicio.Propuesta\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\franc\\Source\\Repos\\Tehuelches-Team\\TEAyudo.Microservicio.Propuesta\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\franc\\Source\\Repos\\Tehuelches-Team\\TEAyudo.Microservicio.Propuesta\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\franc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\franc\\Source\\Repos\\Tehuelches-Team\\TEAyudo.Microservicio.Propuesta\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\matias\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\franc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\matias\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -136,14 +138,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://packagesource": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\franc\\Source\\Repos\\Tehuelches-Team\\TEAyudo.Microservicio.Propuesta\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\franc\\Source\\Repos\\Tehuelches-Team\\TEAyudo.Microservicio.Propuesta\\Application\\Application.csproj"
+              "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Application\\Application.csproj"
               }
             }
           }
@@ -199,7 +202,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
