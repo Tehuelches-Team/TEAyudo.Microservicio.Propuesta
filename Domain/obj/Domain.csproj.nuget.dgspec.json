@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Domain\\Domain.csproj": {}
+    "C:\\Users\\rodrigo\\Desktop\\proyecto\\grupo\\backend\\Propuesta\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Domain\\Domain.csproj": {
+    "C:\\Users\\rodrigo\\Desktop\\proyecto\\grupo\\backend\\Propuesta\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\rodrigo\\Desktop\\proyecto\\grupo\\backend\\Propuesta\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\matias\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\matias\\Source\\Repos\\TEAyudo.Microservicio.Propuesta\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\rodrigo\\Desktop\\proyecto\\grupo\\backend\\Propuesta\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\rodrigo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rodrigo\\Desktop\\proyecto\\grupo\\backend\\Propuesta\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\matias\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rodrigo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,8 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://packagesource": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -56,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
