@@ -30,6 +30,8 @@ builder.Services.AddScoped<IPropuestaQuery, PropuestaQuery>();
 builder.Services.AddScoped<IAcompananteQuery, AcompananteQuery>();
 builder.Services.AddScoped<ITutorQuery, TutorQuery>();
 
+builder.Services.AddCors(x => x.AddDefaultPolicy(c => c.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod()));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -38,7 +40,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
